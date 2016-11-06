@@ -58,3 +58,10 @@ group :development, :test do
   gem 'pry-rails'
 end
 
+group :development do
+  # エラー画面をわかりやすく整形してくれる
+  gem 'better_errors'
+
+  # better_errorsの画面上にirb/pry(PERL)を表示する
+  gem 'binding_of_caller'
+end
