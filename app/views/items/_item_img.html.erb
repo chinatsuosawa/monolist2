@@ -9,7 +9,11 @@
 </div>
 <div class="detail">
   <p class="title">
-    <%= item.title %>
+    <% if params[:controller] == "ranking" %>
+      <span style="color:red;"><%= index %>位</span>：<%= item.title %>
+    <% else %>
+      <%= item.title %>
+    <% end %>
   </p>
 </div>
 <%= render 'items/action' , item: item if logged_in? %>
